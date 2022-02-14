@@ -1,21 +1,26 @@
-# TelemetryPlayground
+# Telemetry playground
 
-**TODO: Add description**
+This is a project to learn how telemetry works in Elixir. It aims to try different things and serve as a playground, as the title says.
+
+This is the result of following [Introduction to Telemetry in Elixir](https://blog.miguelcoba.com/introduction-to-telemetry-in-elixir), by _Miguel Cobá_.
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `telemetry_playground` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:telemetry_playground, "~> 0.1.0"}
-  ]
-end
+```sh
+mix deps.get
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/telemetry_playground>.
+## How to interact with this project
 
+Open an interactive Elixir shell with:
+
+```sh
+iex -S mix
+```
+
+then inside the shell:
+
+```Elixir
+# try this function
+TelemetryPlayground.Grocery.Store.sale("apple", 4, 0.5)
+```
