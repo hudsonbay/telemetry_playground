@@ -7,10 +7,9 @@ defmodule TelemetryPlayground.Application do
 
   @impl true
   def start(_type, _args) do
-    children = [
-      # Starts a worker by calling: TelemetryPlayground.Worker.start_link(arg)
-      # {TelemetryPlayground.Worker, arg}
-    ]
+    children = []
+
+    TelemetryPlayground.Metrics.Instrumenter.setup()
 
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
