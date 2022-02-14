@@ -15,6 +15,9 @@ defmodule TelemetryPlayground.Metrics.Instrumenter do
   end
 
   def handle_event([:grocery, :store, :sale], measurements, metadata, _config) do
-    Logger.info("[Sale telemetry: #{measurements.total}] total for #{metadata.product}")
+    Task.start(fn ->
+      :timer.sleep(5_000)
+      Logger.info("[Sale telemetry: #{measurements.total}] total for #{metadata.product}")
+    end)
   end
 end
